@@ -104,7 +104,6 @@ const Checkout = () => {
     };
     async function makePayment(values) {
         const stripe = await stripePromise;
-        ("wee", values)
         const requestBody = {
             userName: [values.billingAddress.firstName, values.billingAddress.lastName].join(" "),
             email: values.email,

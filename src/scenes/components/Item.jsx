@@ -12,19 +12,16 @@ const Item = (item, width) => {
     const dispatch = useDispatch();
     const [count, setCount] = useState(1);
     const [isHovered, setIsHovered] = useState(false);
-    (item)
     const {
         palette: { natural },
     } = useTheme();
     const { category, price, name, image } = item.item;
-    ("dddddd", category, price, name, image)
 
     const {
         formats: {
             medium: { url },
         }
     } = image;
-    ("wwwww", `$${url}`)
     return (
         <Box width={width}>
             <Box
