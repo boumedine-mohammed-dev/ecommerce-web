@@ -19,11 +19,8 @@ const CartMenu = () => {
     const cart = useSelector((state) => state.cart.cart);
     const isCartOpen = useSelector((state) => state.cart.isCartOpen)
     const totalPrice = cart.reduce((total, item) => {
-        console.log(item)
         return total + item.count * item.price
     }, 0)
-    console.log(cart)
-    console.log(totalPrice)
     return (
         <Box display={isCartOpen ? 'block' : 'none'}
             backgroundColor="rgba(0,0,0,0.4)"
@@ -52,7 +49,6 @@ const CartMenu = () => {
                     </FlexBox>
                     <Box>
                         {cart.map((item) => {
-                            console.log("item=>", item)
                             return (
                                 <Box key={item?.name + "-" + item?.id}>
                                     <FlexBox p={'15px 0'}>

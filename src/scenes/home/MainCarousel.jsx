@@ -13,7 +13,7 @@ const importAll = (r) =>
 const heroTextureImport = importAll(require.context("../../assets", false, /\.(png|jpe?g|svg)$/))
 const MainCarousel = () => {
     const isNonMobile = useMediaQuery("(min-width:600px)")
-    console.log(heroTextureImport)
+
     return (
         <Carousel
             infiniteLoop={true}
@@ -59,7 +59,7 @@ const MainCarousel = () => {
             }}
         >
             {Object.values(heroTextureImport).map((texture, index) => {
-                console.log(texture)
+
                 return (
                     <Box key={`carousel-image-${index}`}>
                         <img

@@ -7,7 +7,7 @@ import Checkout from "./scenes/checkout/Checkout";
 import Navbar from "./scenes/global/Navbar";
 import CartMenu from "./scenes/global/CartMenu";
 import Footer from "./scenes/global/Footer";
-import Container from '@mui/material/Container';
+
 const ScrollToTop = () => {
   const { pathname } = useLocation()
   useEffect(() => {
@@ -18,9 +18,8 @@ const ScrollToTop = () => {
 function App() {
   return (
     <div className="App">
+      {ScrollToTop}
       <BrowserRouter>
-
-        {ScrollToTop}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,9 +30,7 @@ function App() {
         <CartMenu />
         <Footer />
       </BrowserRouter>
-
     </div>
   );
 }
-
 export default App;

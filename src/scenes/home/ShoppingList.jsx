@@ -9,7 +9,6 @@ const ShoppingList = () => {
     const [value, setValue] = useState('all');
     const stateItems = useSelector((state) => state.cart.items)
     const isNonMobile = useMediaQuery("(min-width:600px)");
-    console.log("items", stateItems)
     const handleChange = ((event, newValue) => {
         setValue(newValue)
     })
@@ -32,7 +31,6 @@ const ShoppingList = () => {
     const bestSellersItems = stateItems.filter(
         (item) => item.category === "bestSallers"
     )
-    console.log(value)
     return (
         <Box width="80%" margin='80px auto'>
             <p style={{ textAlign: "center", fontSize: "25px" }}>
